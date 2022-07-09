@@ -10,10 +10,10 @@ import org.springframework.context.ApplicationContext;
 public class MovieRecommenderSystemApplication {
   public static void main(String[] args) {
     // ApplicationContext manages the beans and dependencies
-    ApplicationContext appContenxt = SpringApplication.run(MovieRecommenderSystemApplication.class, args);
+    ApplicationContext appContext = SpringApplication.run(MovieRecommenderSystemApplication.class, args);
 
     // use ApplicationContext to find which filter is being used
-		RecommenderImplementation recommender = appContenxt.getBean(RecommenderImplementation.class);
+		RecommenderImplementation recommender = appContext.getBean(RecommenderImplementation.class);
 
     // call method to get recommendations
 		String[] result = recommender.recommendMovies("Finding Dory");
