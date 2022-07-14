@@ -16,14 +16,11 @@ public class MovieRecommenderSystemApplication {
 
     //retrieve bean from the application context
     RecommenderImplementation recommender =
-      appContext.getBean("recommenderImplementation", RecommenderImplementation.class);
+      appContext.getBean("recommenderImpl", RecommenderImplementation.class);
 
-    //call method to get recommendations
-		String[] result = recommender.recommendMovies("Finding Dory");
-
-    //display results
+    //print dependency
+    System.out.println("\nDependency: " + recommender.getFilter());
     System.out.println();
-		System.out.println(Arrays.toString(result));
 
     appContext.close();
 	}

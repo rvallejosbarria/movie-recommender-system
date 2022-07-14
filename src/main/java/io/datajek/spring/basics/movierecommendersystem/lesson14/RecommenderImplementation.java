@@ -1,11 +1,10 @@
 package io.datajek.spring.basics.movierecommendersystem.lesson14;
 
-public class RecommenderImplementation {
-  private Filter filter;
+import org.springframework.beans.factory.annotation.Autowired;
 
-  public RecommenderImplementation(Filter filter) {
-    this.filter = filter;
-  }
+public class RecommenderImplementation {
+  @Autowired
+  private Filter filter;
 
   public Filter getFilter() {
     return filter;
